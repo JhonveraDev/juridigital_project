@@ -1,0 +1,949 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Juridigital | Pago Exitoso</title>
+  <meta name="description"
+    content="JURIDIGITAL es una plataforma eficiente para gestionar solicitudes de incapacidad y vacaciones. Simplifica y agiliza el proceso de petición en tu empresa con nuestra solución digital fácil de usar.">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <!-- Favicon -->
+  <link rel="icon" href="assets/images/logo/ico.ico" type="image/x-icon">
+  <!-- CSS 
+    ============================================ -->
+  <link rel="stylesheet" href="assets/css/vendor/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/css/vendor/slick.css">
+  <link rel="stylesheet" href="assets/css/vendor/slick-theme.css">
+  <link rel="stylesheet" href="assets/css/vendor/aos.css">
+  <link rel="stylesheet" href="assets/css/plugins/feature.css">
+  <!-- Style css -->
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/whatsap.css" />
+  <style>
+    #loading-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 1);
+      /* Fondo semitransparente */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 1000;
+      /* Asegúrate de que esté encima del contenido */
+    }
+
+    .spinner {
+      border: 4px solid rgba(255, 255, 255, 0.3);
+      /* Color del borde */
+      border-top: 4px solid #ffffff;
+      /* Color del borde superior */
+      border-radius: 50%;
+      width: 50px;
+      height: 50px;
+      animation: spin 1s linear infinite;
+    }
+
+    /* Animación del spinner */
+    @keyframes spin {
+      0% {
+        transform: rotate(0deg);
+      }
+
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+  </style>
+</head>
+
+<body class="template-color-1 spybody white-version" data-spy="scroll" data-bs-target=".navbar-example2"
+  data-offset="150">
+
+  <!-- Start Whatsapp buttom -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="assets/css/whatsapp-button-style.css">
+  <link rel="stylesheet" href="assets/css/whatsapp-chat-style.css">
+  <div class="nav-bottom">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <div class="popup-whatsapp fadeIn">
+      <div class="content-whatsapp -top">
+        <button type="button" class="closePopup">
+          <i class="material-icons icon-font-color">close</i>
+        </button>
+        <div class="content-chat">
+          <img src="assets/images/logo/icon-digital.svg" width="30">
+          <p>¿cómo podemos ayudarte hoy?</p>
+        </div>
+      </div>
+      <div class="content-whatsapp -bottom">
+        <input class="whats-input" id="whats-in" type="text" placeholder="Escribe tu mensaje. 🏛️" />
+        <button class="send-msPopup" id="send-btn" type="button">
+          <i class="material-icons icon-font-color--black">send</i>
+        </button>
+      </div>
+    </div>
+    <button type="button" id="whats-openPopup" class="whatsapp-button">
+      <div class="float" title="Whatsapp contact">
+        <img src="assets/images/icons/whatsapp.svg" class="wtp-button" alt="Whatsapp contact" aria-hidden="true">
+      </div>
+    </button>
+    <div class="circle-anime"></div>
+  </div>
+  <script src="assets/js/whatsapp_contact_script.js"></script>
+  <!-- End Whatsapp buttom -->
+
+  <!-- Start Header -->
+  <header class="rn-header haeder-default black-logo-version header--fixed header--sticky">
+    <div class="header-wrapper rn-popup-mobile-menu m--0 row align-items-center">
+      <!-- Start Header Left -->
+      <div class="col-lg-2 col-6">
+        <div class="header-left">
+          <div class="logo">
+            <a href="#">
+              <div class="display-align-items-center">
+                <img src="assets/images/logo/main-logo.svg" alt="juridigital LOGO" width="150px" />
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+      <!-- End Header Left -->
+
+      <!-- Start Header Center -->
+      <div class="col-lg-10 col-6">
+        <div class="header-center">
+          <nav id="sideNav" class="mainmenu-nav navbar-example2 d-none d-xl-block onepagenav">
+            <!-- Start Mainmanu Nav -->
+            <ul class="primary-menu nav nav-pills">
+              <li class="nav-item">
+                <a class="nav-link" href="index.html">Inicio</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./formularios/liquidaciones.html">Liquidaciones</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./formularios/incapacidades.html">Incapacidades</a>
+              </li>
+            </ul>
+            <!-- End Mainmanu Nav -->
+          </nav>
+
+          <!-- Start Header Right  -->
+          <div class="header-right">
+            <a class="rn-btn"
+              href="https://api.whatsapp.com/send?phone=573138239237&text=Hola!%20Quisiera%20m%C3%A1s%20informaci%C3%B3n%20de%20JURIDIGITAL%20y%20sus%20servicios,%20por%20favor."
+              target="_blank"><span>Contacto</span></a>
+            <div class="hamberger-menu d-block d-xl-none">
+              <i id="menuBtn" class="feather-menu humberger-menu"></i>
+            </div>
+            <div class="close-menu d-block">
+              <span class="closeTrigger">
+                <i data-feather="x"></i>
+              </span>
+            </div>
+          </div>
+          <!-- End Header Right  -->
+        </div>
+      </div>
+      <!-- End Header Center -->
+    </div>
+  </header>
+  <!-- End Header Area -->
+
+  <!-- Start Popup Mobile Menu  -->
+  <div class="popup-mobile-menu">
+    <div class="inner inner-height">
+      <div class="menu-top">
+        <div class="menu-header">
+          <a class="logo logo-custom" href="#">
+            <img src="assets/images/logo/main-logo.svg" alt="juridigital LOGO" width="70px" />
+          </a>
+          <div class="close-button">
+            <button class="close-menu-activation close">
+              <i data-feather="x"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="content">
+        <ul class="main-menu nav nav-pills">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Inicio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="formularios/liquidaciones.html">Liquidaciones</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="formularios/incapacidades.html">Incapacidades</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link"
+              href="https://api.whatsapp.com/send?phone=573138239237&text=Hola!%20Quisiera%20m%C3%A1s%20informaci%C3%B3n%20de%20JURIDIGITAL%20y%20sus%20servicios,%20por%20favor."
+              target="_blank">Contacto</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <!-- End Popup Mobile Menu  -->
+
+  <main class="main-page-wrapper">
+
+    <!-- Start Slider Area -->
+    <div id="home" class="rn-slide-area" style="display: none;">
+      <div class="slide slider-style-3">
+        <div class="container">
+          <div class="row slider-wrapper">
+            <div class="order-2 order-xl-1 col-lg-12 col-xl-5 mt_lg--50 mt_md--50 mt_sm--50">
+              <div class="slider-info">
+                <div class="row">
+                  <div class="col-xl-12 col-lg-12 col-12">
+                    <div class="user-info-top">
+                      <div class="user-info-header">
+                        <div class="user">
+                          <i data-feather="user"></i>
+                        </div>
+                        <h2 class="title">
+                          Pago <span>Exitoso</span>
+                        </h2>
+                        <p class="disc">Recuerda revisar la <span style="color: #013a71;"><b>carpeta de
+                              Descargas</b></span>.
+                          <br>¡Gracias por confiar en JURIDIGITAL!
+                        </p>
+                      </div>
+                      <div class="user-info-footer">
+                        <div class="info">
+                          <i data-feather="file"></i>
+                          <span>Asesoria Laboral</span>
+                        </div>
+                        <div class="info">
+                          <i data-feather="mail"></i>
+                          <span>asesoriajuridigital@gmail.com</span>
+                        </div>
+                        <div class="info">
+                          <i data-feather="map-pin"></i>
+                          <span>Bogotá, Colombia</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-xl-12 col-lg-12 col-12">
+                    <div class="user-info-bottom">
+                      <span>Contáctanos para asistencia o información: </span>
+                      <div class="button-wrapper d-flex">
+                        <a class="rn-btn mr--30"
+                          href="https://api.whatsapp.com/send?phone=573138239237&text=Hola!%20Quisiera%20m%C3%A1s%20informaci%C3%B3n%20de%20JURIDIGITAL%20y%20sus%20servicios,%20por%20favor."
+                          target="_blank"><span>Whatsapp</span></a>
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+            <div class="order-1 order-xl-2 col-lg-12 col-xl-7">
+              <div class="background-image-area">
+                <div class="thumbnail-image">
+                  <img src="assets/images/slider/thank-you.png" alt="Personal Portfolio">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End Slider Area -->
+  </main>
+
+  <div id="loading-overlay" style="display: flex;">
+    <div class="spinner"></div>
+  </div>
+
+  <!-- JS ============================================ -->
+  <script src="assets/js/vendor/jquery.js"></script>
+  <script src="assets/js/vendor/modernizer.min.js"></script>
+  <script src="assets/js/vendor/feather.min.js"></script>
+  <script src="assets/js/vendor/slick.min.js"></script>
+  <script src="assets/js/vendor/bootstrap.js"></script>
+  <script src="assets/js/vendor/text-type.js"></script>
+  <script src="assets/js/vendor/wow.js"></script>
+  <script src="assets/js/vendor/aos.js"></script>
+  <script src="assets/js/vendor/particles.js"></script>
+  <script src="assets/js/vendor/jquery-one-page-nav.js"></script>
+  <!-- main JS -->
+  <script src="assets/js/main.js"></script>
+</body>
+<script src="https://smtpjs.com/v3/smtp.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+<script>
+  document.addEventListener("contextmenu", function(e) {
+    e.preventDefault();
+  });
+  document.addEventListener("DOMContentLoaded", () => {
+    const urlParams = new URLSearchParams(window.location.search);
+    const transactionId = urlParams.get("id");
+    const env = urlParams.get('env');
+    if (transactionId && env) {
+      // const dataLiquidaciones = JSON.parse(sessionStorage.getItem("dataLiquidaciones"));
+      // const dataIncapacidades = JSON.parse(sessionStorage.getItem("dataIncapacidades"));
+      // const dataToSend = dataLiquidaciones ? dataLiquidaciones: dataIncapacidades;
+      // const messageToSend = `Transaction ID: ${transactionId} - ${dataToSend.nombreSolicitante} - ${dataToSend.correoNotificaciones}`;
+      // const subjectToSend = dataLiquidaciones ? `Derecho Pet. Liquidación ${messageToSend}`:`Derecho Pet. Incapacidades ${messageToSend}`;
+      // sendEmail(subjectToSend, dataToSend, dataToSend.correoNotificaciones);
+      getTransactionInfo(transactionId, env);
+    } else {
+      const dataLiquidaciones = JSON.parse(sessionStorage.getItem("dataLiquidaciones"));
+      if (dataLiquidaciones) {
+        sessionStorage.removeItem('dataLiquidaciones');
+      }
+      const dataIncapacidades = JSON.parse(sessionStorage.getItem("dataIncapacidades"));
+      if (dataIncapacidades) {
+        sessionStorage.removeItem('dataIncapacidades');
+      }
+      window.location.href = "https://asesoriajuridigital.com";
+    }
+    // Crear una instancia de jsPDF
+    const {
+      jsPDF
+    } = window.jspdf;
+    const doc = new jsPDF();
+    // variables requeridas
+    const margins = {
+      top: 30,
+      left: 30,
+      bottom: 50,
+      right: 30
+    };
+    const pageWidth = doc.internal.pageSize.width;
+    const maxWidth = 150;
+    const pageHeight = doc.internal.pageSize.height; // Altura de la página
+    const fontSizeDefault = 12;
+    const fontSizeMini = 10;
+    const fontSource = "helvetica";
+    const fontTypeDefault = "normal";
+    const fontTypeBold = "bold";
+    const fontSourceTimes = "times";
+    const fontTypeItalic = "italic";
+    let yPosition = margins.top;
+    let textArray = [];
+    let amountWords = 0;
+    async function getTransactionInfo(transactionId, env) {
+      let url;
+      if (env === 'test') {
+        url = `https://sandbox.wompi.co/v1/transactions/${transactionId}`;
+      } else {
+        url = `https://production.wompi.co/v1/transactions/${transactionId}`;
+      }
+      try {
+        const response = await fetch(url, {
+            method: "GET",
+            headers: {
+              "Authorization": "Bearer pub_test_iTKNKSqmpR72aFmFaQGCb3ABxiw4pAOq"
+            }
+          })
+          .then(response => response.json())
+          .then(data => {
+            if (data.data.status == "APPROVED") {
+              document.getElementById('home').style.display = 'block';
+              document.getElementById('loading-overlay').style.display = 'none';
+              const dataLiquidaciones = JSON.parse(sessionStorage.getItem("dataLiquidaciones"));
+              if (dataLiquidaciones)
+                generatePDFLiquidacion(dataLiquidaciones);
+              const dataIncapacidades = JSON.parse(sessionStorage.getItem("dataIncapacidades"));
+              if (dataIncapacidades)
+                generatePDFIncapacidad(dataIncapacidades);
+              if (!dataLiquidaciones && !dataIncapacidades)
+                window.location.href = "https://asesoriajuridigital.com";
+            } else {
+              document.getElementById('loading-overlay').style.display = 'none';
+              window.location.href = "https://asesoriajuridigital.com/pago-declinado.html";
+            }
+          })
+          .catch(error => {
+            console.error('Error fetching transaction details:', error);
+          });
+      } catch (error) {
+        console.error("Error de red:", error);
+      }
+    }
+    // Función enviar correo
+    // function sendEmail(subjectToSend, infoToSend, correoNotificaciones) {
+    //   // Crear el contenido del correo con formato de clave en negrita y valor en texto normal
+    //   let formattedBody = '';
+    //   for (let key in infoToSend) {
+    //     if (infoToSend.hasOwnProperty(key)) {
+    //       formattedBody += `<strong>${key}:</strong> ${infoToSend[key]}<br>`;
+    //     }
+    //   }
+    //   Email.send({
+    //     SecureToken: "bd2b7485-d61c-4063-ad14-36d09203dc9e",
+    //     To: "asesoriajuridigital@gmail.com",
+    //     From: "asesoriajuridigital@gmail.com",
+    //     Subject: subjectToSend,
+    //     Body: `Datos enviados:<br><br>${formattedBody}`, // Cuerpo con formato
+    //   });
+    // }
+    async function generatePDFLiquidacion(dataLiquidaciones) {
+      const nombreSolicitante = dataLiquidaciones.nombreSolicitante;
+      const tipoDocSolicitante = dataLiquidaciones.tipoDocSolicitante;
+      const numDocSolicitante = dataLiquidaciones.numDocSolicitante;
+      const ciudadSolicitante = dataLiquidaciones.ciudadSolicitante;
+      const serviciosPrestados = dataLiquidaciones.serviciosPrestados;
+      const nombreEmpresa = dataLiquidaciones.nombreEmpresa;
+      const nitEmpresa = dataLiquidaciones.nitEmpresa;
+      const correoNotificaciones = dataLiquidaciones.correoNotificaciones;
+      const selectedValue = dataLiquidaciones.selectedValue;
+      const rangosFechas = dataLiquidaciones.rangosFechas;
+      let messageVecino = "vecina";
+      let messageTrabajador = "trabajadora";
+      let messageIdentificada = "identificada";
+      if (selectedValue && selectedValue === "Hombre") {
+        messageVecino = "vecino";
+        messageTrabajador = "trabajador";
+        messageIdentificada = "identificado";
+      }
+      const articuloBold = `ARTICULO 65. INDEMNIZACION POR FALTA DE PAGO.`;
+      const paragrafo = `PARÁGRAFO.`;
+      const tipoDocumentoSolicitanteLabel = obtenerNombreDocumento(tipoDocSolicitante);
+      boldWords = [
+        nombreSolicitante,
+        nombreEmpresa,
+        articuloBold,
+        paragrafo,
+      ];
+      splitWord(nombreSolicitante.split(" "));
+      splitWord(nombreEmpresa.split(" "));
+      boldWords = boldWords.sort((a, b) => b.length - a.length);
+      boldWords = boldWords.filter(word => word != "Salud");
+      // Configurar el estilo inicial del documento
+      setDefaultValuesDoc();
+      addTextAndSpaceY(`${ciudadSolicitante}, ${getFormattedDate()}`, 10);
+      addTextAndSpaceY(`Señores:`, 5);
+      addTextAndSpaceY(`DEPARTAMENTO DE GESTIÓN HUMANA`, 5);
+      addTextAndSpaceY(`${nombreEmpresa}`, 5);
+      addTextAndSpaceY(`Ciudad.`, 10);
+      addTextAndSpaceY(`Ref.: 	DERECHO DE PETICION PAGO DE LIQUIDACION E INDEMNIZACIÓN `, 5);
+      addTextAndSpaceY(`MORATORIA.`, 15);
+      textArray = [
+        `${nombreSolicitante}, mayor de edad, ${messageVecino} de esta ciudad, ${messageIdentificada} ${tipoDocumentoSolicitanteLabel} No. ${numDocSolicitante}, actuando como ex ${messageTrabajador} de ${nombreEmpresa}, con base en las facultades que confiere la CONSTITUCIÓN POLÍTICA DE COLOMBIA en su ARTÍCULO 23, y por lo establecido en la Ley 1755 de 2015, que impetro el siguiente derecho de petición atendiendo a los siguientes:`,
+      ];
+      addLines(textArray, 5);
+      yPosition += 10;
+      underlineText(`HECHOS`, 10);
+      textArray = [
+        ...rangosFechas.map((rango, index) => {
+          const inicioFormatted = formatDate(new Date(rango.inicio));
+          const finalFormatted = formatDate(new Date(rango.final));
+          const diasIncapacidad = getDiasIncapacidad(rango.inicio, rango.final);
+          return `1. Preste servicios como ${serviciosPrestados} de la empresa ${nombreEmpresa} desde el día ${inicioFormatted} hasta el día ${finalFormatted}.`;
+        }),
+        ...rangosFechas.map((rango, index) => {
+          const inicioFormatted = formatDate(new Date(rango.inicio));
+          const finalFormatted = formatDate(new Date(rango.final));
+          const diasIncapacidad = getDiasIncapacidad(rango.inicio, rango.final);
+          return `2. Que el día ${finalFormatted} finalizo la relación laboral con mi empleador la empresa ${nombreEmpresa}.`;
+        }),
+        ...rangosFechas.map((rango, index) => {
+          const inicioFormatted = formatDate(new Date(rango.inicio));
+          const finalFormatted = formatDate(new Date(rango.final));
+          const diasIncapacidad = getDiasTranscurridos(rango.final);
+          return `3. Que al día de hoy ${getFormattedDate()} la empresa ${nombreEmpresa} no me ha realizado el pago de mi liquidación, pasando ${diasIncapacidad} días de la finalización de la relación laboral.`;
+        }),
+      ];
+      addLines(textArray, 5, margins.left, 5, true, true);
+      underlineText(`FUNDAMENTOS DE DERECHO`, 10);
+      textArray = [
+        `De acuerdo con lo establecido en el artículo 65 del Código Sustantivo del Trabajo:`,
+      ];
+      addLines(textArray, 5, margins.left, 10);
+      doc.setFontSize(fontSizeMini);
+      doc.setFont(fontSourceTimes, fontTypeItalic);
+      addTextBoldWithLineBreak(`${articuloBold}`, 10, margins.left + 15);
+      textArray = [
+        `1. Si a la terminación del contrato, el {empleador} no paga al trabajador los salarios y prestaciones debidos, salvo los casos de retención autorizados por la ley o convenidos por las partes, debe pagar al asalariado, como indemnización, una suma igual al último salario diario por cada día de retardo`,
+      ];
+      addLines(textArray, 5, margins.left + 15, 10, true, true, true);
+      doc.setFontSize(fontSizeDefault);
+      doc.setFont(fontSource, fontTypeDefault);
+      textArray = [
+        ...rangosFechas.map((rango, index) => {
+          const inicioFormatted = formatDate(new Date(rango.inicio));
+          const finalFormatted = formatDate(new Date(rango.final));
+          const diasIncapacidad = getDiasIncapacidad(rango.inicio, rango.final);
+          return `Como se puede observar la relación laboral con la empresa ${nombreEmpresa}, finalizo el día ${finalFormatted} y a la presente fecha no me realizado el pago de mi liquidación, tampoco se me ha notificado de la consignación de la misma mediante depósito judicial, por lo cual la empresa debe pagar la indemnización moratoria establecida en el artículo descrito anterior mente desde la fecha de la terminación de la relación laboral hasta el momento del pago.`;
+        }),
+      ];
+      addLines(textArray, 5);
+      yPosition += 10;
+      underlineText(`PETICION`, 10);
+      // Número de elementos en la primera parte del array
+      const numSolicitudes = rangosFechas.length;
+      // Generación de texto para los pagos de incapacidad
+      textArray = [
+        `1. Le solicito a la empresa ${nombreEmpresa}, se sirva pagar de manera inmediata la liquidación por la terminación de la relación laboral. `,
+        // Generación de texto para los intereses moratorios (limitado a un máximo de 5 fechas)
+        ...rangosFechas.slice(0, 5).map((rango, index) => {
+          const inicioFormatted = formatDate(new Date(rango.inicio));
+          const finalFormatted = formatDate(new Date(rango.final));
+          return `2. Le solicito a la empresa ${nombreEmpresa} se sirva pagar la indemnización moratoria correspondiente establecida en el artículo 65 del código sustantivo del trabajo desde el día  ${finalFormatted}, por el no pago de la liquidación al momento de la terminación del contrato de trabajo.`;
+        }),
+      ];
+      addLines(textArray, 5, margins.left, 5, true);
+      yPosition += 10;
+      underlineText(`NOTIFICACIONES`, 10);
+      textArray = [
+        `Para efectos de notificación, por favor remitir la respuesta al correo electrónico: ${correoNotificaciones}`,
+      ];
+      addLines(textArray, 5, margins.left, 15);
+      addTextAndSpaceY(`Cordial saludo,`, 20);
+      addTextAndSpaceY(`${nombreSolicitante}`, 5);
+      addTextAndSpaceY(`${numDocSolicitante}`, 5);
+      // Descargar el archivo PDF
+      doc.save("derecho_de_peticion_liquidacion.pdf");
+      // sessionStorage.removeItem('dataLiquidaciones');
+    }
+    async function generatePDFIncapacidad(dataIncapacidades) {
+      const nombreSolicitante = dataIncapacidades.nombreSolicitante;
+      const tipoDocSolicitante = dataIncapacidades.tipoDocSolicitante;
+      const numDocSolicitante = dataIncapacidades.numDocSolicitante;
+      const ciudadSolicitante = dataIncapacidades.ciudadSolicitante;
+      const EPSSolicitante = dataIncapacidades.EPSSolicitante;
+      const nombreEmpresa = dataIncapacidades.nombreEmpresa;
+      const nitEmpresa = dataIncapacidades.nitEmpresa;
+      const correoNotificaciones = dataIncapacidades.correoNotificaciones;
+      const rangosFechas = dataIncapacidades.rangosFechas;
+      const numeroRangos = dataIncapacidades.rangosFechas.length;
+      const promotoraSalud = `EPS ${EPSSolicitante}`;
+      const articuloBold = `ARTÍCULO 2.2.3.4.3 Pago de prestaciones económicas.`;
+      const paragrafo = `PARÁGRAFO.`;
+      const tipoDocumentoSolicitanteLabel = obtenerNombreDocumento(tipoDocSolicitante);
+      boldWords = [
+        nombreSolicitante,
+        nombreEmpresa,
+        EPSSolicitante,
+        promotoraSalud,
+        articuloBold,
+        paragrafo,
+      ];
+      splitWord(nombreSolicitante.split(" "));
+      splitWord(nombreEmpresa.split(" "));
+      splitWord(EPSSolicitante.split(" "));
+      splitWord(promotoraSalud.split(" "));
+      boldWords = boldWords.sort((a, b) => b.length - a.length);
+      boldWords = boldWords.filter(word => word != "Salud");
+      boldWords = boldWords.filter(word => word != "EPS");
+      // Configurar el estilo inicial del documento
+      setDefaultValuesDoc();
+      addTextAndSpaceY(`${ciudadSolicitante}, ${getFormattedDate()}`, 5);
+      addTextAndSpaceY(`Ciudad`, 10);
+      addTextAndSpaceY(`Señores:`, 5);
+      addTextBoldWithLineBreak(`EPS ${EPSSolicitante}`, 10);
+      addTextBoldWithoutLineBreak(`ASUNTO:`);
+      addTextAndSpaceY(`SOLICITUD DE PAGO INCAPACIDADES CON INTERESES`, 5, margins.left + 40);
+      addTextAndSpaceY(`MORATORIOS`, 10, margins.left + 40);
+      addTextBoldWithoutLineBreak(`REFERENCIA:`);
+      textArray = [`Aportante: ${nombreEmpresa}, Nit No. ${nitEmpresa}.`];
+      addLines(textArray, 12, margins.left + 40);
+      textArray = [`Afiliado: ${nombreSolicitante}`];
+      addLines(textArray, 5, margins.left + 40);
+      addTextBoldWithLineBreak(`${tipoDocSolicitante}. No. ${numDocSolicitante}`, 10, margins.left + 57);
+      textArray = [
+        `${nombreSolicitante} identificado ${tipoDocumentoSolicitanteLabel} No. ${numDocSolicitante}, actuando en calidad de Representante Legal de la Empresa ${nombreEmpresa}, persona jurídica, identificada con Nit No. ${nitEmpresa}, empleador del señor ${nombreSolicitante} afiliado a esta Entidad Promotora de Salud como cotizante, por medio del presente escrito, con base en las facultades que confiere la CONSTITUCIÓN POLÍTICA DE COLOMBIA en su ARTÍCULO 23, y el CÓDIGO DE PROCEDIMIENTO ADMINISTRATIVO Y DE LO CONTENCIOSO ADMINISTRATIVO en sus artículos 13 y S.S., sustituidos por lo establecido en la Ley 1755 de 2015, impetro el siguiente derecho de petición atendiendo a los siguientes:`,
+      ];
+      addLines(textArray, 5);
+      yPosition += 5;
+      underlineText(`HECHOS`, 10);
+      textArray = [
+        `1. La empresa ${nombreEmpresa}, afilió al señor ${nombreSolicitante} a la Entidad Promotora de Salud ${EPSSolicitante}.`,
+        `2. El señor ${nombreSolicitante} fue atendido por esta Entidad Promotora de Salud ${EPSSolicitante}.`,
+        ...rangosFechas.map((rango, index) => {
+          const inicioFormatted = formatDate(new Date(rango.inicio));
+          const finalFormatted = formatDate(new Date(rango.final));
+          const diasIncapacidad = getDiasIncapacidad(rango.inicio, rango.final);
+          return `${3 + index
+                }. Los profesionales de la salud de ${EPSSolicitante} le otorgaron al señor ${nombreSolicitante} una incapacidad de ${diasIncapacidad} días, iniciando el ${inicioFormatted}, finalizando el ${finalFormatted}.`;
+        }),
+        `${3 + numeroRangos}. Conforme a lo anterior, la empresa ${nombreEmpresa} solicitó ante EPS ${EPSSolicitante} el pago de las incapacidades anteriormente mencionadas del trabajador ${nombreSolicitante}.`,
+        `${4 + numeroRangos}. El Decreto 1333 de 2018 en su ARTÍCULO 2.2.3.1.1. PAGO DE PRESTACIONES ECONÓMICAS, establece a las EPS un plazo de 5 días para cancelar las incapacidades, después de que se emita la autorización de pago, el cual deberá ser emitido dentro de los 15 días hábiles siguientes a la solicitud del empleador.`
+      ];
+      // El iteral  8 se acordo que no se debia mostrar con Daniel
+      addLines(textArray, 5, margins.left, 5, true, true);
+      underlineText(`FUNDAMENTOS DE DERECHO`, 10);
+      textArray = [
+        `Según lo establecido en el artículo 2.2.3.4.3 del Decreto 1427 del 2022 la EPS debe realizar el pago de las incapacidades en los siguientes términos:`,
+      ];
+      addLines(textArray, 5, margins.left, 10);
+      doc.setFontSize(fontSizeMini);
+      textArray = [
+        `ARTÍCULO 2.2.3.4.3 Pago de prestaciones económicas. La revisión y liquidación de las solicitudes de reconocimiento de prestaciones económicas se efectuará por la entidad promotora de salud o entidad adaptada dentro de los quince (15) días hábiles siguientes a su presentación por el aportante, o del interesado en los eventos de licencia de maternidad por extensión.`,
+        `Dentro de los cinco (5) días hábiles siguientes, la entidad promotora de salud o la entidad adaptada efectuarán el pago de las prestaciones que haya autorizado, directamente al aportante, o al interesado, según corresponda, mediante transferencia electrónica. La EPS o entidad adaptada que no cumpla con el plazo definido para el reconocimiento y pago de las prestaciones económicas, deberá realizar el reconocimiento y pago de intereses moratorios al aportante, de acuerdo con lo definido en el artículo 4 del Decreto Ley 1281 de 2002.`,
+        `La entidad promotora de salud o la entidad adaptada enviará comunicación por el medio autorizado por el usuario, informando el monto reconocido y pagado de la respectiva prestación, y podrá verificar por cualquier medio que el beneficiario de la prestación económica la haya recibido.`,
+        `De presentarse incumplimiento del pago de las prestaciones económicas por parte de la EPS o entidad adaptada, el aportante deberá informar a la Superintendencia Nacional de Salud, para que, de acuerdo con sus competencias, esta entidad adelante las acciones a que hubiere lugar.`,
+        `PARÁGRAFO. Los aportantes no podrán deducir de las cotizaciones en salud los valores correspondientes a incapacidades por enfermedad general, licencias de maternidad o paternidad.`,
+      ];
+      addLines(textArray, 5, margins.left, 5);
+      doc.setFontSize(fontSizeDefault);
+      underlineText(`PETICIONES`, 10);
+      // Número de elementos en la primera parte del array
+      const numSolicitudes = rangosFechas.length;
+      // Generación de texto para los pagos de incapacidad
+      textArray = [
+        ...rangosFechas.map((rango, index) => {
+          // Formatear las fechas y calcular los días de incapacidad
+          const inicioFormatted = formatDate(new Date(rango.inicio));
+          const finalFormatted = formatDate(new Date(rango.final));
+          const diasIncapacidad = getDiasIncapacidad(rango.inicio, rango.final);
+          return `${index + 1}. Solicito a esta Entidad Promotora de Salud ${EPSSolicitante} se sirva reconocer el pago de la incapacidad de los ${diasIncapacidad} días comprendidos desde el día ${inicioFormatted} hasta el día ${finalFormatted} del señor ${nombreSolicitante}.`;
+        }),
+        // Generación de texto para los intereses moratorios (limitado a un máximo de 5 fechas)
+        ...rangosFechas.slice(0, 5).map((rango, index) => {
+          const inicioFormatted = formatDate(new Date(rango.inicio));
+          const finalFormatted = formatDate(new Date(rango.final));
+          return `${numSolicitudes + index + 1}. Que EPS ${EPSSolicitante} se sirva cancelar los intereses moratorios a la empresa ${nombreEmpresa} por no cancelar la incapacidad del señor ${nombreSolicitante}, del día ${inicioFormatted} al día ${finalFormatted} conforme al Decreto 1333 de 2018 en el parágrafo 2 del artículo 2.2.3.1.1.`;
+        }),
+        // Agregar el ítem 8 al final (ajustando el índice correctamente)
+        `${numSolicitudes + Math.min(5, rangosFechas.length) + 1}. En caso de que EPS ${EPSSolicitante}, no reconozca el pago de los intereses moratorios causados del señor ${nombreSolicitante} solicito se me indique bajo que fundamento legal niega esta petición.`
+      ];
+      addLines(textArray, 5, margins.left, 5, true, true);
+      underlineText(`ANEXOS`, 10);
+      textArray = [
+        ...rangosFechas.map((rango, index) => {
+          // Formatear las fechas
+          const inicioFormatted = formatDate(new Date(rango.inicio));
+          const finalFormatted = formatDate(new Date(rango.final));
+          // Generar la cadena con el nuevo formato
+          return `${index + 1}. Incapacidad desde el día ${inicioFormatted} hasta el día ${finalFormatted}.`;
+        }),
+      ];
+      addLines(textArray, 5, margins.left, 5, true, true);
+      underlineText(`NOTIFICACIONES`, 10);
+      textArray = [
+        `Para efectos de notificación, por favor remitir la respuesta al correo electrónico: ${correoNotificaciones}`,
+      ];
+      addLines(textArray, 5, margins.left, 15);
+      addTextAndSpaceY(`Atentamente,`, 20);
+      addTextAndSpaceY(`${nombreSolicitante}`, 5);
+      addTextAndSpaceY(`${numDocSolicitante}`, 10);
+      // Descargar el archivo PDF
+      doc.save("derecho_de_peticion_incapacidades.pdf");
+      // sessionStorage.removeItem('dataIncapacidades');
+    }
+    // ----------------------------------Functions --------------------------//
+    function obtenerNombreDocumento(tipoDocSolicitante) {
+      // Definir el mapeo de códigos a nombres completos
+      const documentos = {
+        "C.C": "con la cédula de ciudadanía",
+        "C.E": "con la cédula de extranjería",
+        "NIT": "con el nit",
+        "PPT": "con el pasaporte",
+        "RUT": "con el rut",
+        "T.I": "con la tarjeta de identidad"
+      };
+      // Retornar el nombre completo del documento en minúsculas
+      return documentos[tipoDocSolicitante] ||
+      "documento desconocido"; // Devuelve "documento desconocido" si no coincide
+    }
+    // Función para dividir palabra
+    function splitWord(palabraToSplit) {
+      for (let i = 1; i <= 4; i++) {
+        amountWords = i;
+        for (let j = 0; j < palabraToSplit.length; j += amountWords) {
+          const palabra = palabraToSplit.slice(j, j + amountWords).join(" ");
+          if (!boldWords.includes(palabra)) {
+            boldWords.push(palabra);
+          }
+        }
+        for (let j = 1; j < palabraToSplit.length; j += amountWords) {
+          const palabra = palabraToSplit.slice(j, j + amountWords).join(" ");
+          if (!boldWords.includes(palabra)) {
+            boldWords.push(palabra);
+          }
+        }
+        for (let j = 2; j < palabraToSplit.length; j += amountWords) {
+          const palabra = palabraToSplit.slice(j, j + amountWords).join(" ");
+          if (!boldWords.includes(palabra)) {
+            boldWords.push(palabra);
+          }
+        }
+      }
+    }
+    // Función para formatear la fecha
+    function setDefaultValuesDoc() {
+      doc.setFontSize(fontSizeDefault);
+      doc.setFont(fontSource, fontTypeDefault);
+    }
+
+    function getFormattedDate() {
+      const opciones = {
+        year: "numeric",
+        month: "long",
+        day: "numeric"
+      };
+      return new Date().toLocaleDateString("es-ES", opciones);
+    }
+    // Función para agregar una linea de texto y aumentar yPosition
+    function addTextAndSpaceY(text, yPositionAdd, xPosition = margins.left) {
+      doc.text(text, xPosition, yPosition);
+      yPosition += yPositionAdd;
+    }
+    // Función set font dependiendo del flag
+    function isBold(isBoldFlag) {
+      if (isBoldFlag) {
+        doc.setFont(fontSource, fontTypeBold);
+      } else {
+        doc.setFont(fontSource, fontTypeDefault);
+      }
+    }
+    // Función para agregar un texto en negrilla sin salto de linea
+    function addTextBoldWithoutLineBreak(text, xPosition = margins.left) {
+      doc.setFont(fontSource, fontTypeBold);
+      doc.text(text, xPosition, yPosition);
+      doc.setFont(fontSource, fontTypeDefault);
+    }
+    // Función para agregar un texto en negrilla sin salto de linea
+    function addTextBoldWithLineBreak(
+      text,
+      yPositionAdd,
+      xPosition = margins.left
+    ) {
+      doc.setFont(fontSource, fontTypeBold);
+      doc.text(text, xPosition, yPosition);
+      yPosition += yPositionAdd;
+      doc.setFont(fontSource, fontTypeDefault);
+    }
+    // Función para verificar y crear una nueva página si es necesario
+    function checkPageBreak() {
+      if (yPosition > pageHeight - margins.bottom) {
+        doc.addPage(); // Crear una nueva página
+        yPosition = margins.top; // Reiniciar yPosition al margen superior
+      }
+    }
+    // Función para formatear fechas en formato "XX de XXX de 201X"
+    function formatDate(date) {
+      const day = date.getDate();
+      const month = date.toLocaleString("es-ES", {
+        month: "long"
+      });
+      const year = date.getFullYear();
+      return `${day} de ${month} de ${year}`;
+    }
+    // Underline text
+    function underlineText(text, yPositionAdd) {
+      doc.setFont(fontSource, fontTypeBold);
+      // Obtener el ancho del texto
+      const textWidth = doc.getTextWidth(text);
+      // Calcular la posición X para centrar el texto
+      const pageWidth = doc.internal.pageSize.width;
+      const xPosition = (pageWidth - textWidth) / 2;
+      // Agregar el texto centrado y en negrita
+      doc.text(text, xPosition, yPosition);
+      // Dibujar una línea debajo del texto para el subrayado
+      const underlineY = yPosition + 1; // Ajusta la posición Y de la línea
+      doc.setLineWidth(0.4); // Grosor de la línea
+      doc.line(xPosition, underlineY, xPosition + textWidth, underlineY);
+      yPosition += yPositionAdd;
+      // Restaurar el estilo de texto a normal
+      doc.setFont(fontSource, fontTypeDefault);
+    }
+    // Funcion, dias entre fechas
+    function getDiasIncapacidad(inicio, final) {
+      const fechaInicio = new Date(inicio);
+      const fechaFinal = new Date(final);
+      const diferenciaTiempo = fechaFinal - fechaInicio;
+      const diferenciaDias =
+        Math.ceil(diferenciaTiempo / (1000 * 60 * 60 * 24)) + 1; // +1 para incluir el día inicial
+      return diferenciaDias;
+    }
+    // Funcion, dias entre fechas
+    function getDiasTranscurridos(fechaReferencia) {
+      const fechaHoy = new Date();
+      const fechaFinal = new Date(fechaReferencia);
+      const diferenciaTiempo = fechaHoy - fechaFinal;
+      const diferenciaDias =
+        Math.ceil(diferenciaTiempo / (1000 * 60 * 60 * 24)) + 1; // +1 para incluir el día inicial
+      return diferenciaDias;
+    }
+
+    function countWords(text) {
+      const words = text.trim().split(/\s+/);
+      return words.length;
+    }
+
+    function justifyLineWithSpecialWord(segmentos, totalWidthLine, countWord, xPositionAdd = margins.left,
+      amountIndexed = 0) {
+      let missingSpace = (maxWidth - xPositionAdd + margins.left) - (totalWidthLine +
+      amountIndexed); // el espacio que hace falta 
+      if ((totalWidthLine + amountIndexed) > (maxWidth - xPositionAdd + margins.left)) {
+        missingSpace = 0;
+      }
+      const widthSpaceCharacter = doc.getTextWidth(" "); // lo que ocupa un espacio
+      const spacePerGap = missingSpace / (countWord - 1);
+      let xPositionInPDF = xPositionAdd + amountIndexed;
+      segmentos.forEach((segmento, indexSegmento) => {
+        const segmentoText = segmento.texto.trim();
+        const isLastSegmento = indexSegmento === segmentos.length - 1;
+        const words = segmentoText.split(" ");
+        words.forEach((eachWord, indexWord) => {
+          isBold(segmento.bold);
+          doc.text(eachWord, xPositionInPDF, yPosition);
+          xPositionInPDF += doc.getTextWidth(eachWord) + widthSpaceCharacter + spacePerGap;
+          doc.setFont(fontSource, fontTypeDefault);
+        });
+      });
+    }
+
+    function justifyLineWithOutSpecialWord(lineFromLines, xPositionAdd = margins.left, amountIndexed = 0) {
+      lineFromLines = lineFromLines.trim();
+      let totalWidth = doc.getTextWidth(lineFromLines); // ancho que ocupa la frase
+      let missingSpace = (maxWidth - xPositionAdd + margins.left) - (totalWidth +
+      amountIndexed); // el espacio que hace falta 
+      if ((totalWidth + amountIndexed) > (maxWidth - xPositionAdd + margins.left)) {
+        missingSpace = 0;
+      }
+      const widthSpaceCharacter = doc.getTextWidth(" "); // lo que ocupa un espacio
+      const countWord = countWords(lineFromLines); // devuelve cantidad de palabras
+      const words = lineFromLines.split(" "); // divide missingSpace en palabras
+      const spacePerGap = missingSpace / (countWord - 1);
+      let xPositionInPDF = xPositionAdd + amountIndexed;
+      words.forEach((eachWord, indexWord) => {
+        doc.text(eachWord, xPositionInPDF, yPosition);
+        xPositionInPDF += doc.getTextWidth(eachWord) + widthSpaceCharacter + spacePerGap;
+      });
+    }
+
+    function noJustifyLineWithSpecialWord(segmentos, xPositionAdd = margins.left, amountIndexed = 0) {
+      let xPositionInPDF = xPositionAdd + amountIndexed;
+      const widthSpaceCharacter = doc.getTextWidth(" ");
+      segmentos.forEach((segmento, indexSegmento) => {
+        const segmentoText = segmento.texto.trim();
+        const isLastSegmento = indexSegmento === segmentos.length - 1;
+        const words = segmentoText.split(" ");
+        words.forEach((eachWord, indexWord) => {
+          isBold(segmento.bold);
+          doc.text(eachWord, xPositionInPDF, yPosition);
+          xPositionInPDF += doc.getTextWidth(eachWord) + widthSpaceCharacter;
+        });
+      });
+    }
+
+    function dividirLineaEnSegmentos(lineFromLines, palabrasDinamicas) {
+      let segmentos = [];
+      let lineaRestante = lineFromLines;
+      // Ordenar palabrasDinamicas de mayor a menor longitud para evitar problemas con subcadenas
+      palabrasDinamicas.sort((a, b) => b.length - a.length);
+      // Iterar sobre la línea y dividirla basado en las coincidencias
+      while (lineaRestante.length > 0) {
+        let coincidenciaEncontrada = false;
+        // Buscar la primera coincidencia de palabrasDinamicas en lineaRestante
+        for (const palabra of palabrasDinamicas) {
+          const indice = lineaRestante.indexOf(palabra);
+          // Si se encuentra la palabra en cualquier parte de la línea
+          if (indice !== -1) {
+            // Si hay texto antes de la coincidencia, agregarlo como segmento
+            const textoAntes = lineaRestante.substring(0, indice);
+            if (textoAntes.trim() !== "") {
+              segmentos.push({
+                texto: textoAntes.trim(),
+                bold: false
+              });
+            }
+            // Agregar la palabra dinámica como segmento
+            segmentos.push({
+              texto: palabra,
+              bold: true
+            });
+            // Actualizar lineaRestante para continuar procesando
+            lineaRestante = lineaRestante.substring(indice + palabra.length).trim();
+            coincidenciaEncontrada = true;
+            break; // Salir del bucle for
+          }
+        }
+        // Si no se encontró ninguna coincidencia, agregar el resto de la línea como segmento
+        if (!coincidenciaEncontrada) {
+          segmentos.push({
+            texto: lineaRestante,
+            bold: false
+          });
+          break; // Salir del bucle while
+        }
+      }
+      return segmentos;
+    }
+
+    function eliminarSubcadenas(palabrasDinamicas) {
+      return palabrasDinamicas.filter((palabra, index, array) => {
+        return !array.some((otraPalabra, otroIndex) =>
+          index !== otroIndex && otraPalabra.includes(palabra)
+        );
+      });
+    }
+
+    function addLines(arrayText, yPositionAdd, xPositionAdd = margins.left, addSpaceBetweenItem = 0, isIndexed =
+      false, isJustify = true, isItalic = false) {
+      // iterar sobre el arreglo cada posicion puede tener muchos caracteres mayor que el ancho
+      arrayText.forEach((textFromArray, indexArray) => {
+        const isLastTextFromArray = indexArray === arrayText.length - 1;
+        let linesToProcess = [];
+        let maxWidthCustom = maxWidth;
+        if (xPositionAdd !== margins.left)
+          maxWidthCustom = maxWidth - (xPositionAdd - margins.left);
+        if (isItalic)
+          doc.setFont(fontSourceTimes, fontTypeItalic);
+        else
+          doc.setFont(fontSource, fontTypeDefault);
+        linesToProcess = doc.splitTextToSize(textFromArray, maxWidthCustom);
+        // Ya se hizo split sobre cada texto teniendo en cuenta el maxWidth, ahora iterar sobre esas lineas de cada texto para incrustarlas en el pdf
+        linesToProcess.forEach((lineFromLines, indexLine) => {
+          const isLastLineFromLines = indexLine === linesToProcess.length - 1;
+          const isNoFirstLineFromLines = indexLine !== 0;
+          // Buscar la coincidencia en boldWords
+          const palabrasDinamicasAux = boldWords.filter((palabra) => lineFromLines.includes(palabra));
+          const palabrasDinamicas = eliminarSubcadenas(palabrasDinamicasAux);
+          lineFromLines = lineFromLines.trim();
+          if (palabrasDinamicas.length === 0) { // no encontro ninguna coincidencia en esta linea
+            // si es ultima linea no se debe justificar
+            if ((isLastLineFromLines && isJustify) || !isJustify) {
+              let amountIndexed = 0;
+              if (isIndexed && isNoFirstLineFromLines)
+                amountIndexed = 5;
+              doc.text(lineFromLines, xPositionAdd + amountIndexed, yPosition);
+            } else {
+              let amountIndexed = 0;
+              if (isIndexed && isNoFirstLineFromLines)
+                amountIndexed = 5;
+              justifyLineWithOutSpecialWord(lineFromLines, xPositionAdd, amountIndexed);
+            }
+          } else {
+            if ((isLastLineFromLines && isJustify) || !isJustify) {
+              let amountIndexed = 0;
+              if (isIndexed && isNoFirstLineFromLines)
+                amountIndexed = 5;
+              const segmentos = dividirLineaEnSegmentos(lineFromLines, palabrasDinamicas);
+              noJustifyLineWithSpecialWord(segmentos, xPositionAdd, amountIndexed);
+            } else {
+              const segmentos = dividirLineaEnSegmentos(lineFromLines, palabrasDinamicas);
+              const totalWidthLine = doc.getTextWidth(lineFromLines);
+              const countWord = countWords(lineFromLines);
+              let amountIndexed = 0;
+              if (isIndexed && isNoFirstLineFromLines)
+                amountIndexed = 5;
+              justifyLineWithSpecialWord(segmentos, totalWidthLine, countWord, xPositionAdd, amountIndexed);
+            }
+          }
+          yPosition +=
+          yPositionAdd; // Aumentar la posición Y para la siguiente línea dentro del mismo textFromArray
+          checkPageBreak(yPosition); // Verificar si se necesita nueva página
+        });
+        yPosition += addSpaceBetweenItem; // Aumentar la posición Y para el siguiente elmento de textFromArray
+        checkPageBreak(yPosition); // Verificar si se necesita nueva página
+      });
+    }
+  });
+</script>
